@@ -32,7 +32,7 @@ table td {
 }
 
 table th {
-    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    background-color: rgb(0, 0, 0);
     color: white;
     font-weight: 600;
 }
@@ -143,14 +143,6 @@ button.btn {
 button.btn:hover {
     background: linear-gradient(135deg, #ff6e7f, #d4a5a5);
     transform: scale(1.115);
-}
-
-footer {
-    background: linear-gradient(135deg, #00358b, #0b86c7);
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 40px;
 }
 
 .form-container {

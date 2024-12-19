@@ -6,7 +6,12 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #5acae3, #20b8ff);
+    background-color: bisque;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh;
+    margin: 0;
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -14,11 +19,11 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #00448d, #0077b6);
+    background-color: #ff6600; /* Đổi từ đen sang cam */
     color: white;
     padding: 20px 0;
     text-align: left;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.2); /* Đổi từ đen sang cam nhạt */
 }
 
 header .logo h1 {
@@ -66,4 +71,12 @@ main {
 .tbao {
     display: none;
     color: red;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
 }

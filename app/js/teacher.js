@@ -5,8 +5,7 @@ function openTeacher() {
 function editGV(id) {
     document.getElementById("teacher").style.display = 'none';
     document.getElementById("edit-gv").style.display = 'block';
-    document.getElementById("maGV").innerHTML = id;
-    eel.send(id);
+    document.getElementById("maGV").innerText = id;
 
     eel.getListGV()(function(listGV) {
         let split = listGV[id].split("|");
@@ -37,6 +36,11 @@ cancelButton2.addEventListener('click', function() {
     document.getElementById("teacher").style.display = 'block';
 });
 
+function removeGV(id) {
+    eel.removeGV(parseInt(id));
+    location.reload();
+}
+
 eel.getListGV()(function(listGV) {
     let id = 0;
     listGV.forEach(function(a) {
@@ -46,12 +50,12 @@ eel.getListGV()(function(listGV) {
             <td>${split[0]}</td>
             <td>${split[1]}</td>
             <td>${split[2]}</td>
-            <td><button onclick="editGV(${id})" class="btn" style="width: 100px; height: 30px; background: linear-gradient(135deg, #00358b, #0b86c7);">Sửa</button></td>
+            <td><button onclick="editGV(${id})" class="btn" style="width: 100px; height: 30px; background: linear-gradient(135deg, #00358b, #0b86c7);">Sửa</button><button onclick="removeGV(${id})" class="btn" style="width: 100px; height: 30px; background-color: red;">Xóa</button></td>
         </tr></tbody>`;
 
         id += 1;
 
-        document.getElementById("arrayGV").innerHTML += document.getElementById("arrayGV").innerHTML = row;
+        document.getElementById("arrayGV").innerHTML += row;
     });
 });
 
@@ -69,7 +73,7 @@ document.querySelector('.editGV').addEventListener('click', () => {
         let tbao = document.getElementById("tbao");
         tbao.style.color = "green";
         tbao.textContent = "Bạn đã nhập đủ thông tin✔️";
-        eel.setGV(document.getElementById("maGV").value, teacherName, teacherSubject, teacherDob);
+        eel.setGV(parseInt(document.getElementById("maGV").getHTML()), teacherName, teacherSubject, teacherDob);
         tbao.style.color = "red";
 
         return;
@@ -96,11 +100,3 @@ document.querySelector('.addGV').addEventListener('click', () => {
         return;
     }
 });
-
-/*
-document.querySelectorAll('.edit-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        eel.addGV();
-    });
-});
-*/

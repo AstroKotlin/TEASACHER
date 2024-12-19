@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Giáo Viên</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/teacher-student.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/16803/16803995.png">
+    <script type="text/javascript" src="/eel.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1><img src="https://cdn-icons-png.flaticon.com/128/16803/16803995.png" height="80px"/>TEASACHER - Quản Lý Dành Cho Giáo Viên</h1>
+        </div>
+        <nav>
+            <ul>
+                
+                <li><a href="main.html">Trang Chủ</a></li>
+                <li><a>Danh Sách Giáo Viên</a></li>
+                <li><a href="student.html">Danh Sách Học Sinh</a></li>
+                <li><a href="https://azota.vn/vi/auth/login">Bài Thi</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button onclick="ttpm()" class="btn" style="width: 120px; height: 50px; border-radius: 3px; background-color: rgb(14, 14, 14); position: static;">Thông tin phần mềm</button>
+    <main>
+        <section class="dashboard">
+            <div id="main" class="card-mai">
+
+            </div>
+
+            <div id="teacher" class="card teacher-list">
+                <h3>Danh Sách Giáo Viên</h3>
+                <button id="showFormButton" class="btn">
+                    <span class="label">+ Thêm giáo viên</span>
+                    <span class="gradient-container">
+                      <span class="gradient"></span>
+                    </span>
+                </button>
+                <br>
+                <button onclick="print()" class="btn">
+                    <span class="label">In ra giấy</span>
+                    <span class="gradient-container">
+                      <span class="gradient"></span>
+                    </span>
+                </button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Họ Tên</th>
+                            <th>Môn Dạy</th>
+                            <th>Ngày Sinh</th>
+                            <th>Chỉnh Sửa</th>
+                        </tr>
+                    </thead>
+                    <tbody id="arrayGV"></tbody>
+                </table>
+
+            </div>
+
+
+            <div id="form-container" class="form-container">
+                <h3>Thêm Giáo Viên</h3>
+                <form id="teacherForm">
+                    <p for="teacherName">Họ Tên:</p>
+                    <input type="text" placeholder="Input here..." id="teacherName" name="teacherName" class="input" required><br>
+                    <p for="subject">Môn Dạy:</p>
+                    <input type="text" placeholder="Input here..." id="subject" name="subject" class="input" required><br>
+
+                    <p for="dob">Ngày Sinh:</p>
+                    <input type="date" placeholder="Input here..." id="dob" name="dob" class="input" required><br>
+
+                    <p id="tbao" class="tbao">Hãy nhập đầy đủ thông tin nhé!</p>
+                    <button type="submit" class="addGV">Lưu</button>
+                    <button type="button" id="cancelButton">Hủy</button>
+                </form>
+            </div>
+
+            <div id="edit-gv" class="form-container">
+                <h3>Sửa thông tin giáo viên. id: <a id="maGV"></a></h3>
+                <form id="teacherForm">
+                    <p for="teacherName">Họ Tên:</p>
+                    <input type="text" placeholder="Input here..." id="edit-teacherName" name="teacherName" class="input" required><br>
+                    <p for="subject">Môn Dạy:</p>
+                    <input type="text" placeholder="Input here..." id="edit-subject" name="subject" class="input" required><br>
+
+                    <p for="dob">Ngày Sinh:</p>
+                    <input type="date" placeholder="Input here..." id="edit-dob" name="dob" class="input" required><br>
+
+                    <p id="tbao" class="tbao">Hãy nhập đầy đủ thông tin nhé!</p>
+                    <button type="submit" class="editGV">Lưu</button>
+                    <button type="button" id="cancelButton2">Hủy</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2024 AstroKotlin(Tran Huy Bao 9A11)
+        </p>
+        
+    </footer>
+
+    <script type="text/javascript" src="js/teacher.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

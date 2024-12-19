@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.hero {
+    background: url('image/school-bg.png') no-repeat center center;
+    background-size: cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #FFD700;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta-btn:hover {
+    background-color: #FF9800;
+}
+
+.courses {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.courses .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.course-item {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.course-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.course-item a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.course-item a:hover {
+    text-decoration: underline;
+}
+
+.about, .contact {
+    padding: 50px 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
